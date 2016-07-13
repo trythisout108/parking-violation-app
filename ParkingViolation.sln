@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingViolation", "ParkingViolation\ParkingViolation.csproj", "{AF58DE1D-691B-40EE-8E0D-16B38F800E67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingViolation.Tests", "ParkingViolation.Tests\ParkingViolation.Tests.csproj", "{0FBBF729-6E55-45A9-AF3F-1224AF44D421}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF58DE1D-691B-40EE-8E0D-16B38F800E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF58DE1D-691B-40EE-8E0D-16B38F800E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF58DE1D-691B-40EE-8E0D-16B38F800E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF58DE1D-691B-40EE-8E0D-16B38F800E67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBBF729-6E55-45A9-AF3F-1224AF44D421}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBBF729-6E55-45A9-AF3F-1224AF44D421}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBBF729-6E55-45A9-AF3F-1224AF44D421}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBBF729-6E55-45A9-AF3F-1224AF44D421}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

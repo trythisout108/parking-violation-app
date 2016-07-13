@@ -1,0 +1,75 @@
+﻿@model ParkingViolation.Models.Volunteer
+
+@{
+	ViewBag.Title = "Volunteer Details";
+}
+
+<h2>@Model.FirstMidName's Details</h2>
+
+<div>
+	<h4>Volunteer</h4>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.FirstMidName)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.FirstMidName)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.LastName)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.LastName)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.PhoneNumber)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.PhoneNumber)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.EmailAddress)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.EmailAddress)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Vehicles)
+		</dt>
+		<dd>
+			@if (Model.Vehicles.Count > 0)
+			{
+				<text>@Model.Vehicles.Count vehicle(s) are register</text>
+				<table class="table">
+					<tr>
+						<th>Number Plate</th>
+						<th># of Violations</th>
+					</tr>
+					@foreach (var item in Model.Vehicles)
+					{
+						<tr>
+							<td>@Html.DisplayFor(modelItem => item.State) @Html.DisplayFor(modelItem => item.NumberPlate)</td>
+							<td>@Html.DisplayFor(modelItem => item.Violations.Count)</td>
+						</tr>
+					}
+				</table>
+			}
+			else
+			{
+				<text>0 vehicles are register.</text>
+			}
+		</dd>
+	</dl>
+</div>
+<p>
+	@Html.ActionLink("Edit", "Edit", new { id = Model.PersonID }) |
+	@Html.ActionLink("Back to List", "Index")
+</p>
