@@ -24,6 +24,7 @@ namespace ParkingViolation.Controllers
 			var volunteers = from v in db.Volunteers
 							 select v;
 
+
 			switch (sortOrder)
 			{
 				case "FirstName_Desc":
