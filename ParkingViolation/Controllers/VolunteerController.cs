@@ -16,7 +16,7 @@ namespace ParkingViolation.Controllers
 		private ParkingViolationContext db = new ParkingViolationContext();
 
 		// GET: Volunteer
-		public ActionResult Index(string sortOrder, string searchString, string currentFilter)
+		public ActionResult Index(string sortOrder, string searchString) //, string currentFilter)
 		{
 			ViewBag.CurrentFilter = searchString;
 			ViewBag.FirstNameSortOrder = (String.IsNullOrEmpty(sortOrder) ? "FirstName_Desc" : String.Empty);

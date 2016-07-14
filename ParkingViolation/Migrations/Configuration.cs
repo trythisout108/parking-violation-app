@@ -31,10 +31,16 @@ namespace ParkingViolation.Migrations
 
 			var volunteers = new List<Volunteer>
 			{
-				new Volunteer { FirstMidName = "Kalpesh", LastName = "Patel", PhoneNumber = "1000000001", EmailAddress = "kalpesh-test@gmail.com"},
-				new Volunteer { FirstMidName = "Aarzoo", LastName = "Shah", PhoneNumber = "2000000001", EmailAddress = "aarzoo-test@gmail.com"},
+				new Volunteer { FirstMidName = "Kalpesh", LastName = "Patel", PhoneNumber = "1000000001", EmailAddress = "kalpeshpatel-test@gmail.com"},
+				new Volunteer { FirstMidName = "Aarzoo", LastName = "Shah", PhoneNumber = "2000000001", EmailAddress = "aarzooshah-test@gmail.com"},
 				new Volunteer { FirstMidName = "John", LastName = "J", PhoneNumber = "3000000001", EmailAddress = "johnj-test@gmail.com"},
-				new Volunteer { FirstMidName = "John", LastName = "Lock", PhoneNumber = "4000000001", EmailAddress = "johnlock-test@gmail.com"}
+				new Volunteer { FirstMidName = "John", LastName = "Lock", PhoneNumber = "4000000001", EmailAddress = "johnlock-test@gmail.com"},
+				new Volunteer { FirstMidName = "Michael", LastName = "Shah", PhoneNumber = "5000000001", EmailAddress = "michaelshah-test@gmail.com"},
+				new Volunteer { FirstMidName = "Rajiv", LastName = "Gandhi", PhoneNumber = "6000000001", EmailAddress = "rajivgandhi-test@gmail.com"},
+				new Volunteer { FirstMidName = "John", LastName = "Piazza", PhoneNumber = "7000000001", EmailAddress = "johnpiazza-test@gmail.com"},
+				new Volunteer { FirstMidName = "Brian", LastName = "Smith", PhoneNumber = "8000000001", EmailAddress = "briansmith-test@gmail.com"},
+				new Volunteer { FirstMidName = "Frank", LastName = "Kampalia", PhoneNumber = "1100000001", EmailAddress = "frankkampalia-test@gmail.com"},
+				new Volunteer { FirstMidName = "Amy", LastName = "Buttler", PhoneNumber = "1200000001", EmailAddress = "amybuttler-test@gmail.com"}
 			};
 			volunteers.ForEach(v => context.Volunteers.AddOrUpdate(x => x.PhoneNumber, v));
 			context.SaveChanges();
