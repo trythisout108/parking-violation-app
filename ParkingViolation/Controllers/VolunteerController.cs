@@ -16,14 +16,19 @@ namespace ParkingViolation.Controllers
 		private ParkingViolationContext db = new ParkingViolationContext();
 
 		// GET: Volunteer
-		public ActionResult Index(string sortOrder)
+		public ActionResult Index(string sortOrder, string searchString, string currentFilter)
 		{
+			ViewBag.CurrentFilter = searchString;
 			ViewBag.FirstNameSortOrder = (String.IsNullOrEmpty(sortOrder) ? "FirstName_Desc" : String.Empty);
 			ViewBag.LastNameSortOrder = (sortOrder == "LastName_Asc" ? "LastName_Desc" : "LastName_Asc");
 
 			var volunteers = from v in db.Volunteers
 							 select v;
 
+			if (!string.IsNullOrEmpty(searchString))
+			{
+				volunteers = volunteers.Where(v => v.FirstMidName.Contains(searchString) || v.LastName.Contains(searchString));	
+			}
 
 			switch (sortOrder)
 			{

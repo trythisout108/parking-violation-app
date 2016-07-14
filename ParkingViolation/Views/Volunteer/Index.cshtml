@@ -1,5 +1,4 @@
-﻿@using ParkingViolation.Models
-@model IEnumerable<ParkingViolation.Models.Volunteer>
+﻿@model IEnumerable<ParkingViolation.Models.Volunteer>
 
 @{
 	ViewBag.Title = "Volunteers";
@@ -10,13 +9,22 @@
 <p>
 	@Html.ActionLink("Create New", "Create")
 </p>
+
+@using (Html.BeginForm("Index", "Volunteer", FormMethod.Get))
+{
+	<p>
+		Filter by Name: @Html.TextBox("searchString")
+		<input type="submit" value="Search" />
+	</p>
+}
+
 <table class="table">
 	<tr>
 		<th>
-			@Html.ActionLink(Html.DisplayNameFor(m => m.FirstMidName).ToHtmlString(), "Index", new { sortOrder = ViewBag.FirstNameSortOrder })
+			@Html.ActionLink(Html.DisplayNameFor(m => m.FirstMidName).ToHtmlString(), "Index", new { sortOrder = ViewBag.FirstNameSortOrder, searchString = ViewBag.CurrentFilter })
 		</th>
 		<th>
-			@Html.ActionLink(Html.DisplayNameFor(m => m.LastName).ToHtmlString(), "Index", new { sortOrder = ViewBag.LastNameSortOrder })
+			@Html.ActionLink(Html.DisplayNameFor(m => m.LastName).ToHtmlString(), "Index", new { sortOrder = ViewBag.LastNameSortOrder, searchString = ViewBag.CurrentFilter })
 		</th>
 		<th>
 			@Html.DisplayNameFor(model => model.PhoneNumber)
