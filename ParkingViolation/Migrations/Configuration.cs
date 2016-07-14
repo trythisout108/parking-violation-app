@@ -31,10 +31,10 @@ namespace ParkingViolation.Migrations
 
 			var volunteers = new List<Volunteer>
 			{
-				new Volunteer { FirstMidName = "Kalpesh", LastName = "Patel", PhoneNumber = "1000000001", EmailAddress = "kalpesh.patel@almacgroup.com"},
-				new Volunteer { FirstMidName = "Aarzoo", LastName = "Shah", PhoneNumber = "2000000001", EmailAddress = "aarzookp@gmail.com"},
-				new Volunteer { FirstMidName = "John", LastName = "J", PhoneNumber = "3000000001", EmailAddress = "johndow@gmail.com"},
-				new Volunteer { FirstMidName = "John", LastName = "Lock", PhoneNumber = "4000000001", EmailAddress = "johnlock54@gmail.com"}
+				new Volunteer { FirstMidName = "Kalpesh", LastName = "Patel", PhoneNumber = "1000000001", EmailAddress = "kalpesh-test@gmail.com"},
+				new Volunteer { FirstMidName = "Aarzoo", LastName = "Shah", PhoneNumber = "2000000001", EmailAddress = "aarzoo-test@gmail.com"},
+				new Volunteer { FirstMidName = "John", LastName = "J", PhoneNumber = "3000000001", EmailAddress = "johnj-test@gmail.com"},
+				new Volunteer { FirstMidName = "John", LastName = "Lock", PhoneNumber = "4000000001", EmailAddress = "johnlock-test@gmail.com"}
 			};
 			volunteers.ForEach(v => context.Volunteers.AddOrUpdate(x => x.PhoneNumber, v));
 			context.SaveChanges();
